@@ -1,0 +1,12 @@
+{{form_start(form)}}
+<div class="my-custom-class-for-errors">
+    {{ form_errors(form) }}
+</div>
+<div class="row">
+    <div class="col-md-4"> {{form_row(form.username)}}</div>
+    <div class="col-md-4"> {{form_row(form.plainPassword.first)}}</div>
+    <div class="col-md-4"> {{form_row(form.plainPassword.second)}}</div>
+
+</div>
+<button type="submit" class="btn btn-success btn-sm fa fa-user">  {{ button|default('Enregistrer')}} </button>
+{{form_end(form)}}
